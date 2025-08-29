@@ -1,32 +1,105 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV – Maximiliano Bonnet</title>
-  <meta name="description" content="Currículum profesional de Maximiliano Bonnet – QA Analyst / QA Automation sSR." />
-  <link rel="stylesheet" href="style.css" />
-  <script>href = "scripts.js"</script>
-</head>
+  <meta name="description" content="Currículum profesional de Maximiliano Bonnet – QA Analyst / QA Automation sSR, experiencia en pruebas de APIs, automatización con Cypress y Postman, y stack JavaScript." />
+  <style>
+    :root{
+      --bg: #0f1115;
+      --card: #151823;
+      --muted: #9aa4b2;
+      --text: #e5e7eb;
+      --brand: #6ee7b7; /* verde suave */
+      --brand-2:#60a5fa; /* azul suave */
+      --chip:#1f2433;
+      --border:#252a37;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb; --card:#ffffff; --muted:#556070; --text:#111827; --chip:#eef2f7; --border:#e6e8ee;
+      }
+    }
 
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text);}
+
+    .container{max-width:1000px; margin:40px auto; padding:24px;}
+
+    .header{display:grid; grid-template-columns: 140px 1fr; gap:24px; align-items:center;}
+    .avatar{width:140px; height:140px; border-radius:24px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); padding:3px;}
+    .avatar-inner{width:100%; height:100%; border-radius:22px; background:var(--card); display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:600; border:1px solid var(--border);}
+
+    .title h1{margin:0 0 6px 0; font-size:34px; letter-spacing:.3px}
+    .title .role{color:var(--muted); font-size:16px}
+
+    .card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px;}
+
+    .grid{display:grid; grid-template-columns: 2.2fr 1fr; gap:24px; margin-top:24px;}
+
+    .contact{display:flex; flex-wrap:wrap; gap:14px; margin-top:10px}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:var(--chip); color:var(--text); border:1px solid var(--border); font-size:14px}
+    .pill svg{width:16px; height:16px}
+
+    h2.section{margin:0 0 12px 0; font-size:18px; letter-spacing:.2px}
+    p{line-height:1.6; margin:0}
+
+    .list{display:flex; flex-direction:column; gap:12px}
+    .item{padding:12px; border:1px solid var(--border); border-radius:12px; background:transparent}
+    .item h3{margin:0 0 4px 0; font-size:16px}
+    .item .meta{color:var(--muted); font-size:13px}
+    .bullets{margin:8px 0 0 0; padding-left:18px}
+    .bullets li{margin:6px 0}
+
+    .chips{display:flex; flex-wrap:wrap; gap:8px}
+    .chip{padding:8px 10px; background:var(--chip); border:1px solid var(--border); border-radius:10px; font-size:13px}
+
+    .side .card + .card{margin-top:16px}
+
+    .toolbar{display:flex; gap:10px; margin-top:14px}
+    .btn{appearance:none; border:none; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b1220; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer}
+    .btn.secondary{background:transparent; color:var(--text); border:1px solid var(--border)}
+
+    footer{margin:28px 0; text-align:center; color:var(--muted); font-size:12px}
+
+    /* Print */
+    @media print{
+      .toolbar{display:none}
+      .container{margin:0; max-width:100%;}
+      .grid{grid-template-columns: 1.6fr 1fr}
+      a::after{content:" (" attr(href) ")"; color:#888; font-size:11px}
+    }
+  </style>
+</head>
 <body>
   <div class="container">
     <header class="header">
       <div class="avatar">
         <div class="avatar-inner" id="photoDrop">
-          <img src="maxi.jpg" alt=""
-            style="width:100%; height:100%; object-fit:cover; border-radius:22px; display:block;"></img>
+          <img src="maxi.jpg" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:22px; display:block;">
         </div>
       </div>
       <div class="title">
         <h1>Maximiliano Bonnet</h1>
         <div class="role">QA Analyst / QA Automation (sSR)</div>
         <div class="contact">
-          <span class="pill">📍 CABA, Argentina</span>
-          <a class="pill" href="tel:+541158591513">📞 +54 11 5859-1513</a>
-          <a class="pill" href="mailto:maxbonn1975@gmail.com">✉️ maxbonn1975@gmail.com</a>
-          <a class="pill" href="https://www.linkedin.com/in/maximiliano-bonnet/" target="_blank">LinkedIn</a>
+          <span class="pill" title="Ubicación">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s7-6.5 7-12A7 7 0 1 0 5 10c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="3"/></svg>
+            CABA, Argentina
+          </span>
+          <a class="pill" href="tel:+541158591513" title="Teléfono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.77.73 2.58a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.5-1.25a2 2 0 0 1 2.11-.45c.81.36 1.68.61 2.58.73A2 2 0 0 1 22 16.92Z"/></svg>
+            +54 11 5859-1513
+          </a>
+          <a class="pill" href="mailto:maxbonn1975@gmail.com" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+            maxbonn1975@gmail.com
+          </a>
+          <a class="pill" href="https://www.linkedin.com/in/maximiliano-bonnet/" id="lnkLinkedin" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M8 11v5"/><circle cx="8" cy="7" r="1"/><path d="M12 16v-5m6 5v-3a3 3 0 0 0-6 0"/></svg>
+            LinkedIn
+          </a>
         </div>
         <div class="toolbar">
           <button class="btn" id="printBtn">Descargar PDF</button>
@@ -35,17 +108,14 @@
       </div>
     </header>
 
-    <!-- Perfil profesional -->
     <main class="grid">
+      <!-- Columna principal -->
       <section class="card">
         <h2 class="section">Perfil profesional</h2>
-        <p>Analista QA Manual y Automation con más de 5 años de experiencia en aseguramiento de calidad de software en
-          entornos ágiles. </p>En pruebas de APIs y automatización con Cypress, Postman y Newman.</p>En pruebas de APIs y automatización con Cypress, Postman y Newman. Experiencia
-          en CI/CD, frameworks de testing, pruebas de carga con JMeter y documentación de resultados.</p>  <p>Persona analítica,
-          proactiva y orientada a la mejora continua.</p>
+        <p>Analista QA Manual y Automation con más de 5 años de experiencia en aseguramiento de calidad de software en entornos ágiles. Especialista en pruebas de APIs y automatización con Cypress, Postman y Newman. Experiencia en CI/CD, frameworks de testing, pruebas de carga con JMeter y documentación de resultados. Persona analítica, proactiva y orientada a la mejora continua.</p>
       </section>
 
-      <!-- Idiomas -->
+      <!-- Columna lateral corta: Idiomas y disponibilidad -->
       <aside class="side">
         <div class="card">
           <h2 class="section">Idiomas</h2>
@@ -55,22 +125,19 @@
           </div>
         </div>
         <div class="card">
-          <h2>Técnico Superior en Análisis de Sistemas — IFTS N°16</h2>
-          <p>Recibido.</p>
-          <h2 class="section">Certificación Pedagógica --IES J.B.Justo</h2>
+          <h2 class="section">Certificación Pedagógica</h2>
           <p>En curso.</p>
         </div>
       </aside>
     </main>
 
-    <!-- Experiencia profesional -->
-    <section class="grid">
+    <section class="grid" style="margin-top:24px">
       <div class="card">
         <h2 class="section">Experiencia profesional</h2>
         <div class="list">
           <div class="item">
             <h3>Openpass — QA Analyst / QA Automation (sSR)</h3>
-            <div class="meta">2022 – Actualidad · Olivos , Provincia de BS. As., Argentina</div>
+            <div class="meta">2022 – Actualidad · CABA, Argentina</div>
             <ul class="bullets">
               <li>Pruebas manuales y automatizadas con Postman, JMeter, Selenium, Cypress, Cucumber, Newman y Qase.</li>
               <li>Desarrollo y mantenimiento de suites y scripts de pruebas; diseño de casos a partir de requerimientos.</li>
@@ -105,7 +172,7 @@
             <h3>Your Own Way Institute — Socio Fundador</h3>
             <div class="meta">2006 – Presente</div>
             <ul class="bullets">
-              <li>Administracion del instituto de inglés y mantenimiento de plataforma digital institucional.</li>
+              <li>Gestión del instituto de inglés y mantenimiento de plataforma institucional.</li>
             </ul>
           </div>
         </div>
@@ -148,24 +215,104 @@
             <li>Servicio de Atención al Cliente: Creación de Valor</li>
           </ul>
         </div>
+        <div class="card">
+          <h2 class="section">Habilidades blandas</h2>
+          <div class="chips">
+            <span class="chip">Trabajo en equipo</span>
+            <span class="chip">Proactividad</span>
+            <span class="chip">Pensamiento crítico</span>
+            <span class="chip">Atención al detalle</span>
+            <span class="chip">Comunicación efectiva</span>
+            <span class="chip">Gestión del tiempo</span>
+            <span class="chip">Adaptabilidad</span>
+          </div>
+        </div>
       </aside>
     </section>
 
-    <!-- Educación -->
-    <section class="grid">
+    <!-- ✅ Nueva sección Analista Funcional -->
+    <section class="grid" style="margin-top:24px">
       <div class="card">
-        <h2 class="section">Educación</h2>
+        <h2 class="section">Analista Funcional</h2>
         <ul class="bullets">
-          <li>Técnico Superior en Análisis de Sistemas — IFTS N°16</li>
-          <li>Certificación Pedagógica (En curso)</li>
-          <li>Escuela Secundaria D.F. Sarmiento</li>
+          <li>Levantamiento, análisis y documentación de requerimientos funcionales.</li>
+          <li>Comunicación fluida entre áreas técnicas y de negocio.</li>
+          <li>Redacción de casos de uso, diagramas de procesos y especificaciones funcionales.</li>
+          <li>Validación y priorización de requerimientos junto con stakeholders.</li>
+          <li>Diseño y seguimiento de pruebas funcionales (UAT, smoke, regresión).</li>
+          <li>Manejo de herramientas de gestión (Jira, Confluence, Trello, Qase, etc.).</li>
+          <li>Conocimientos en metodologías ágiles (Scrum / Kanban).</li>
+          <li>Análisis de impacto y propuestas de mejora continua en procesos y sistemas.</li>
+          <li>Capacidad de traducir necesidades del negocio en requerimientos técnicos claros.</li>
+          <li>Soporte en la implementación y post-producción.</li>
         </ul>
       </div>
     </section>
 
-    <footer>© <span id="y"></span> Maximiliano Bonnet — CV Web.</footer>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <section class="grid" style="margin-top:24px">
+      <div class="card">
+        <h2 class="section">Educación</h2>
+        <div class="list">
+          <div class="item">
+            <h3>Técnico Superior en Análisis de Sistemas — IFTS N°16 (CABA)</h3>
+          </div>
+          <div class="item">
+            <h3>Certificación Pedagógica — IES J.B.Justo - En curso</h3>
+          </div>
+          <div class="item">
+            <h3>Escuela Secundaria D.F. Sarmiento</h3>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="section">Intereses</h2>
+        <div class="chips">
+          <span class="chip">Automatización</span>
+          <span class="chip">DevTools</span>
+          <span class="chip">Calidad de software</span>
+          <span class="chip">Educación</span>
+        </div>
+      </div>
+    </section>
 
+    <footer>© <span id="y"></span> Maximiliano Bonnet — CV Web. </footer>
+  </div>
+
+  <script>
+    // Fecha del footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Print a PDF (usa el diálogo del navegador)
+    document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+    // Tema claro/oscuro con toggle
+    const themeBtn = document.getElementById('themeBtn');
+    let dark = true;
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.style.setProperty('--bg', dark ? '#f6f7fb' : '#0f1115');
+      document.documentElement.style.setProperty('--card', dark ? '#ffffff' : '#151823');
+      document.documentElement.style.setProperty('--muted', dark ? '#556070' : '#9aa4b2');
+      document.documentElement.style.setProperty('--text', dark ? '#111827' : '#e5e7eb');
+      document.documentElement.style.setProperty('--chip', dark ? '#eef2f7' : '#1f2433');
+      document.documentElement.style.setProperty('--border', dark ? '#e6e8ee' : '#252a37');
+      dark = !dark;
+    });
+  </script>
+
+  <!-- Datos estructurados para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maximiliano Bonnet",
+    "jobTitle": "QA Analyst / QA Automation",
+    "address": {"@type":"PostalAddress","addressLocality":"CABA","addressCountry":"AR"},
+    "email": "mailto:maxbonn1975@gmail.com",
+    "telephone": "+541158591513",
+    "knowsAbout": [
+      "QA", "Testing de APIs", "Cypress", "Postman", "Selenium", "JMeter", "CI/CD", "JavaScript", "Analista Funcional", "Requerimientos"
+    ]
+  }
+  </script>
+</body>
 </html>
