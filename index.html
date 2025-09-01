@@ -1,83 +1,280 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CV – Maximiliano Bonnet</title>
-  <meta name="description" content="Currículum profesional de Maximiliano Bonnet – QA Analyst / QA Automation sSR, experiencia en pruebas de APIs, automatización con Cypress y Postman, y stack JavaScript." />
+  <meta name="description"
+    content="Currículum profesional de Maximiliano Bonnet – QA Analyst / QA Automation sSR, experiencia en pruebas de APIs, automatización con Cypress y Postman, y stack JavaScript." />
   <style>
-    :root{
+    :root {
       --bg: #0f1115;
       --card: #151823;
       --muted: #9aa4b2;
       --text: #e5e7eb;
-      --brand: #6ee7b7; /* verde suave */
-      --brand-2:#60a5fa; /* azul suave */
-      --chip:#1f2433;
-      --border:#252a37;
+      --brand: #6ee7b7;
+      /* verde suave */
+      --brand-2: #60a5fa;
+      /* azul suave */
+      --chip: #1f2433;
+      --border: #252a37;
     }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f6f7fb; --card:#ffffff; --muted:#556070; --text:#111827; --chip:#eef2f7; --border:#e6e8ee;
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --muted: #556070;
+        --text: #111827;
+        --chip: #eef2f7;
+        --border: #e6e8ee;
       }
     }
 
-    *{box-sizing:border-box}
-    html,body{margin:0; padding:0; font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; background:var(--bg); color:var(--text);}
+    * {
+      box-sizing: border-box
+    }
 
-    .container{max-width:1000px; margin:40px auto; padding:24px;}
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+    }
 
-    .header{display:grid; grid-template-columns: 140px 1fr; gap:24px; align-items:center;}
-    .avatar{width:140px; height:140px; border-radius:24px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); padding:3px;}
-    .avatar-inner{width:100%; height:100%; border-radius:22px; background:var(--card); display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:600; border:1px solid var(--border);}
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 24px;
+    }
 
-    .title h1{margin:0 0 6px 0; font-size:34px; letter-spacing:.3px}
-    .title .role{color:var(--muted); font-size:16px}
+    .header {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
 
-    .card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:18px;}
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      padding: 3px;
+    }
 
-    .grid{display:grid; grid-template-columns: 2.2fr 1fr; gap:24px; margin-top:24px;}
+    .avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
 
-    .contact{display:flex; flex-wrap:wrap; gap:14px; margin-top:10px}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:var(--chip); color:var(--text); border:1px solid var(--border); font-size:14px}
-    .pill svg{width:16px; height:16px}
+    .title h1 {
+      margin: 0 0 6px 0;
+      font-size: 34px;
+      letter-spacing: .3px
+    }
 
-    h2.section{margin:0 0 12px 0; font-size:18px; letter-spacing:.2px}
-    p{line-height:1.6; margin:0}
+    .title .role {
+      color: var(--muted);
+      font-size: 16px
+    }
 
-    .list{display:flex; flex-direction:column; gap:12px}
-    .item{padding:12px; border:1px solid var(--border); border-radius:12px; background:transparent}
-    .item h3{margin:0 0 4px 0; font-size:16px}
-    .item .meta{color:var(--muted); font-size:13px}
-    .bullets{margin:8px 0 0 0; padding-left:18px}
-    .bullets li{margin:6px 0}
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
 
-    .chips{display:flex; flex-wrap:wrap; gap:8px}
-    .chip{padding:8px 10px; background:var(--chip); border:1px solid var(--border); border-radius:10px; font-size:13px}
+    .grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 24px;
+      margin-top: 24px;
+    }
 
-    .side .card + .card{margin-top:16px}
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px
+    }
 
-    .toolbar{display:flex; gap:10px; margin-top:14px}
-    .btn{appearance:none; border:none; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b1220; padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer}
-    .btn.secondary{background:transparent; color:var(--text); border:1px solid var(--border)}
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--chip);
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-size: 14px
+    }
 
-    footer{margin:28px 0; text-align:center; color:var(--muted); font-size:12px}
+    .pill svg {
+      width: 16px;
+      height: 16px
+    }
+
+    h2.section {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+      letter-spacing: .2px
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .item {
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: transparent
+    }
+
+    .item h3 {
+      margin: 0 0 4px 0;
+      font-size: 16px
+    }
+
+    .item .meta {
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .bullets {
+      margin: 8px 0 0 0;
+      padding-left: 18px
+    }
+
+    .bullets li {
+      margin: 6px 0
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .chip {
+      padding: 8px 10px;
+      background: var(--chip);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 13px
+    }
+
+    .side .card+.card {
+      margin-top: 16px
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #0b1220;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border)
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .cert-item {
+      text-align: center;
+    }
+
+    .cert-item h3 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .cert-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+
+    footer {
+      margin: 28px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px
+    }
 
     /* Print */
-    @media print{
-      .toolbar{display:none}
-      .container{margin:0; max-width:100%;}
-      .grid{grid-template-columns: 1.6fr 1fr}
-      a::after{content:" (" attr(href) ")"; color:#888; font-size:11px}
+    @media print {
+      .toolbar {
+        display: none
+      }
+
+      .container {
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: 1.6fr 1fr
+      }
+
+      a::after {
+        content: " (" attr(href) ")";
+        color: #888;
+        font-size: 11px
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header class="header">
       <div class="avatar">
         <div class="avatar-inner" id="photoDrop">
-          <img src="maxi.jpg" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:22px; display:block;">
+          <img src="maxi.jpg" alt=""
+            style="width:100%; height:100%; object-fit:cover; border-radius:22px; display:block;">
         </div>
       </div>
       <div class="title">
@@ -85,19 +282,33 @@
         <div class="role">QA Analyst / QA Automation (sSR)</div>
         <div class="contact">
           <span class="pill" title="Ubicación">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s7-6.5 7-12A7 7 0 1 0 5 10c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 22s7-6.5 7-12A7 7 0 1 0 5 10c0 5.5 7 12 7 12Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
             CABA, Argentina
           </span>
           <a class="pill" href="tel:+541158591513" title="Teléfono">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.77.73 2.58a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.5-1.25a2 2 0 0 1 2.11-.45c.81.36 1.68.61 2.58.73A2 2 0 0 1 22 16.92Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.77.73 2.58a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.5-1.25a2 2 0 0 1 2.11-.45c.81.36 1.68.61 2.58.73A2 2 0 0 1 22 16.92Z" />
+            </svg>
             +54 11 5859-1513
           </a>
           <a class="pill" href="mailto:maxbonn1975@gmail.com" title="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M4 4h16v16H4z" />
+              <path d="m22 6-10 7L2 6" />
+            </svg>
             maxbonn1975@gmail.com
           </a>
           <a class="pill" href="https://www.linkedin.com/in/maximiliano-bonnet/" id="lnkLinkedin" title="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M8 11v5"/><circle cx="8" cy="7" r="1"/><path d="M12 16v-5m6 5v-3a3 3 0 0 0-6 0"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="2" width="20" height="20" rx="3" />
+              <path d="M8 11v5" />
+              <circle cx="8" cy="7" r="1" />
+              <path d="M12 16v-5m6 5v-3a3 3 0 0 0-6 0" />
+            </svg>
             LinkedIn
           </a>
         </div>
@@ -112,8 +323,11 @@
       <!-- Columna principal -->
       <section class="card">
         <h2 class="section">Perfil profesional</h2>
-        <p>Analista QA Manual y Automation con más de 5 años de experiencia en aseguramiento de calidad de software en entornos ágiles. Especialista en pruebas de APIs y automatización con Cypress, Postman y Newman. Experiencia en CI/CD, frameworks de testing, pruebas de carga con JMeter y documentación de resultados. Persona analítica, proactiva y orientada a la mejora continua.</p>
-            </section>
+        <p>Analista QA Manual y Automation con más de 5 años de experiencia en aseguramiento de calidad de software en
+          entornos ágiles. Especialista en pruebas de APIs y automatización con Cypress, Postman y Newman. Experiencia
+          en CI/CD, frameworks de testing, pruebas de carga con JMeter y documentación de resultados. Persona analítica,
+          proactiva y orientada a la mejora continua.</p>
+      </section>
 
       <!-- Columna lateral corta: Idiomas y disponibilidad -->
       <aside class="side">
@@ -140,7 +354,8 @@
             <div class="meta">2022 – Actualidad · CABA, Argentina</div>
             <ul class="bullets">
               <li>Pruebas manuales y automatizadas con Postman, JMeter, Selenium, Cypress, Cucumber, Newman y Qase.</li>
-              <li>Desarrollo y mantenimiento de suites y scripts de pruebas; diseño de casos a partir de requerimientos.</li>
+              <li>Desarrollo y mantenimiento de suites y scripts de pruebas; diseño de casos a partir de requerimientos.
+              </li>
               <li>Soporte en CI/CD, control de versiones con Git y reportes claros de defectos.</li>
               <li>Pruebas de carga y estrés con JMeter; trabajo en equipos ágiles (Scrum).</li>
               <li>seguimiento de logs con metricslogs en Kibana</li>
@@ -168,9 +383,10 @@
             <h3>Indigo Balance — QA Manual</h3>
             <div class="meta">2020 – 2021</div>
             <ul class="bullets">
-              <li>Desarrollo y mantenimiento de suites y scripts de pruebas; diseño de casos a partir de requerimientos.</li>
+              <li>Desarrollo y mantenimiento de suites y scripts de pruebas; diseño de casos a partir de requerimientos.
+              </li>
               <li>Pruebas manuales, realizacion de reportes .</li>
-               
+
             </ul>
           </div>
           <div class="item">
@@ -252,9 +468,6 @@
           <li>Soporte en la implementación y post-producción.</li>
         </ul>
       </div>
-    </section>
-
-    <section class="grid" style="margin-top:24px">
       <div class="card">
         <h2 class="section">Educación</h2>
         <div class="list">
@@ -269,6 +482,11 @@
           </div>
         </div>
       </div>
+
+    </section>
+
+    <section class="grid" style="margin-top:24px">
+
       <div class="card">
         <h2 class="section">Intereses</h2>
         <div class="chips">
@@ -278,7 +496,33 @@
           <span class="chip">Educación</span>
         </div>
       </div>
+
     </section>
+
+    <section class="grid" style="margin-top:24px">
+      <div class="card">
+        <h2 class="section">Certificados</h2>
+        <div class="cert-grid">
+          <div class="cert-item">
+            <h3>Certificación Python</h3>
+            <img src="certpy.jpg" alt="Certificado Python">
+          </div>
+          <div class="cert-item">
+            <h3>Certificación owasp</h3>
+            <img src="owaspcert.jpg" alt="Certificado DevTools">
+          </div>
+          <div class="cert-item">
+            <h3>Certificación Networking</h3>
+            <img src="certNet.png" alt="Certificado Calidad de software">
+          </div>
+          <div class="cert-item">
+            <h3>Scrum</h3>
+            <img src="scrum.png" alt="Certificado Educación">
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <footer>© <span id="y"></span> Maximiliano Bonnet — CV Web. </footer>
   </div>
@@ -320,4 +564,5 @@
   }
   </script>
 </body>
+
 </html>
